@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: skills-ingress
-  namespace: skills
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/load-balancer-name: skills-alb
+  name: <ingress_name>
+  namespace: <namespace>
+  annotations: #annotations 옵션으로 alb에 세밀한 설정이 가능하다. 이건 예시고 더 많이 있다
+    alb.ingress.kubernetes.io/scheme: <alb_internet> #internet-facing or internal
+    alb.ingress.kubernetes.io/target-type: <target_group_type>
+    alb.ingress.kubernetes.io/load-balancer-name: <alb_name>
 spec:
   ingressClassName: alb
   rules:
@@ -16,6 +16,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: skills-service
+              name: <service_name>
               port:
                 number: 80
