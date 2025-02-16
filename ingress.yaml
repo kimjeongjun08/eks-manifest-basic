@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ssot-ingress
-  namespace: ssot
+  name: skills-ingress
+  namespace: skills
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/load-balancer-name: ssot-alb
+    alb.ingress.kubernetes.io/load-balancer-name: skills-alb
 spec:
   ingressClassName: alb
   rules:
@@ -16,6 +16,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: ssot-service
+              name: skills-service
               port:
                 number: 80
