@@ -1,7 +1,7 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: skills-eks-cluster
+  name: <eks_name>
   version: "1.32" #버전
   region: ap-northeast-2 #리전 
   
@@ -82,10 +82,10 @@ iam:
         - "ec2:DescribeLaunchTemplateVersions"
         Resource: '*'
 managedNodeGroups:
-  - name: skills-eks-nodegroup #nodegroup 이름
+  - name: <nodegroup_name> #nodegroup 이름
     labels: { role: apps }
     instanceType: t3.medium
-    instanceName: skills-eks-node
+    instanceName: <node_name>
     desiredCapacity: 2
     minSize: 2
     maxSize: 2
