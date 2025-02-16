@@ -4,7 +4,7 @@ metadata:
   name: <service_name>
   namespace: <namespace>
 spec:
-  type: NodePort #or ClusterIP, LoadBalancer
+  type: <service_type> # NodePort or ClusterIP, LoadBalancer
   selector:
     app: <match_label>
   ports:
