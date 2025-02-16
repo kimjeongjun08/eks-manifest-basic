@@ -4,7 +4,9 @@ metadata:
   name: skills-eks-cluster
   version: "1.32" #버전
   region: ap-northeast-2 #리전 
+  
 vpc:
+  id: "<VPC_ID>"
   subnets:
     public:
       public-a: { id: } #기용영역 a에 위치한 퍼블릭 서브넷
