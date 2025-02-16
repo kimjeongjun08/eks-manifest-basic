@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: skills-deployment
-  namespace: skills
+  name: <deployment_name>
+  namespace: <namespace>
 spec:
-  replicas: 2
+  replicas: <replicas>
   selector:
     matchLabels:
-      app: skills
+      app: <match_lable>
   template:
     metadata:
       labels:
-        app: skills
+        app: <label>
     spec:
       containers:
-        - name: skills
-          image: nginx
+        - name: <container_name>
+          image: <image>
