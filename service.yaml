@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ssot-service
-  namespace: ssot
+  name: <service_name>
+  namespace: <namespace>
 spec:
-  type: NodePort
+  type: NodePort #or ClusterIP, LoadBalancer
   selector:
-    app: ssot
+    app: <match_label>
   ports:
-    - name: ssot
+    - name: <port name>
       protocol: TCP
-      port: 80
-      targetPort: 80
+      port: <port>
+      targetPort: <target_port> #애플리케이션 파드. 예를 들어, 내가 flask를 8080 포트로 띄웠다면 타겟포트를 8080으로 지정
