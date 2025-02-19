@@ -100,5 +100,7 @@ managedNodeGroups:
     iam:
       withAddonPolicies:
         imageBuilder: true
+        awsLoadBalancerController: true
         externalDNS: true
         certManager: true
+        autoScaler: true
