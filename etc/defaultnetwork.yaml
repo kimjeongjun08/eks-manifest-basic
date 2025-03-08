@@ -31,7 +31,7 @@ managedNodeGroups:
     desiredCapacity: 2
     minSize: 1
     maxSize: 20
-    amiFamily: Bottlerocket
+    amiFamily: AmazonLinux2023
     privateNetworking: true
     volumeType: gp2
     volumeEncrypted: true
